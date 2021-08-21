@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AudioEXAMPLE</title>
+    <script src="./Sounds/onclicksound.wav" type=audio/wav></script>
+    <script>
+        funciton play() {
+                var audio = document.getElementById("sound");
+                audio.play();
+    </script>
+</head>
+
+<body>
+    <div>
+        <audio id="sound"><source src="onclicksound.wav" type="audio/WAV"></audio>
+        <button onclick="play()" type="button">Click here for sound</button>
+    </div>
+</body>
+
+</html>

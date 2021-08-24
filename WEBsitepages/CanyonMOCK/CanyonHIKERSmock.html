@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canyon Hikers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- font script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- animation tag -->
+    <style>
+        /*Font Code*/
+        
+        h1 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 68px;
+            color: #44284A
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            background-color: #44284A;
+            color: #DE7A65;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #A46D84;
+            background-color: #44284A
+        }
+        
+        .btn {
+            background-color: #8F3335;
+            color: #DE7A65;
+            border: #8F3335
+        }
+        
+        .btn:hover {
+            background-color: #DE7A65;
+            color: #9140AF;
+            border: #8F3335
+        }
+        
+        .btn:checked {
+            background-color: #A46D84;
+            color: #3c246B;
+            border: #8F3335
+        }
+        
+        .rollInLeft {
+            -webkit-animation-name: rollInLeft;
+            animation-name: rollInLeft;
+            -webkit-animation-duration: .9s;
+            animation-duration: .9s;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+        
+        @keyframes rollInLeft {
+            0% {
+                -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                -webkit-transform: translateX(-400px) rotate(445deg);
+                transform: translateX(-400px) rotate(445deg);
+                opacity: 0
+            }
+            30% {
+                opacity: 1
+            }
+            50% {
+                -webkit-transform: translateX(20px) rotate(20deg);
+                transform: translateX(20px) rotate(20deg)
+            }
+            100% {
+                -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -webkit-transform: translateX(0) rotate(0deg);
+                transform: translateX(0) rotate(0deg)
+            }
+        }
+        
+        .rollInRight {
+            -webkit-animation-name: rollInRight;
+            animation-name: rollInRight;
+            -webkit-animation-duration: .9s;
+            animation-duration: .9s;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+        
+        @keyframes rollInRight {
+            0% {
+                -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                -webkit-transform: translateX(400px) rotate(-445deg);
+                transform: translateX(400px) rotate(-445deg);
+                opacity: 0
+            }
+            30% {
+                opacity: 1
+            }
+            50% {
+                -webkit-transform: translateX(-20px) rotate(-20deg);
+                transform: translateX(-20px) rotate(-20deg)
+            }
+            100% {
+                -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -webkit-transform: translateX(0) rotate(0deg);
+                transform: translateX(0) rotate(0deg)
+            }
+        }
+        
+        .rollInTop {
+            -webkit-animation-name: rollInTop;
+            animation-name: rollInTop;
+            -webkit-animation-duration: .9s;
+            animation-duration: .9s;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+        
+        @keyframes rollInTop {
+            0% {
+                -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                -webkit-transform: translateY(-400px) rotate(-445deg);
+                transform: translateY(-400px) rotate(-445deg);
+                opacity: 0
+            }
+            30% {
+                opacity: 1
+            }
+            50% {
+                -webkit-transform: translateY(20px) rotate(-20deg);
+                transform: translateY(20px) rotate(-20deg)
+            }
+            100% {
+                -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -webkit-transform: translateY(0) rotate(0deg);
+                transform: translateY(0) rotate(0deg)
+            }
+        }
+        
+        .rollInBottom {
+            -webkit-animation-name: rollInBottom;
+            animation-name: rollInBottom;
+            -webkit-animation-duration: .9s;
+            animation-duration: .9s;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+        
+        @keyframes rollInBottom {
+            0% {
+                -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                -webkit-transform: translateY(400px) rotate(-445deg);
+                transform: translateY(400px) rotate(-445deg);
+                opacity: 0
+            }
+            30% {
+                opacity: 1
+            }
+            50% {
+                -webkit-transform: translateY(-20px) rotate(-20deg);
+                transform: translateY(-20px) rotate(-20deg)
+            }
+            100% {
+                -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                -webkit-transform: translateY(0) rotate(0deg);
+                transform: translateY(0) rotate(0deg)
+            }
+        }
+        
+        .navbar-brand {
+            color: #A46D84;
+            background-color: #A46D84
+        }
+    </style>
+</head>
+
+<body>
+    <audio controls>
+        <source src="audio/CanyonHIKERS.m4a" type="audio/m4a">
+    </audio>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand mr-3">Canyon Hikers</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item nav-link active">Home</a>
+                    <a href="#" class="nav-item nav-link">Services</a>
+                    <a href="#" class="nav-item nav-link">Contact</a>
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a href="#" class="nav-item nav-link">Register</a>
+                    <a href="#" class="nav-item nav-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <img src="./images/CanyonHIKERS.png" alt="GrandCANYON">
+            <p class="lead">Welcome to Canyon Hikers, your one stop shop for all your travel & hiking needs in the Grand Canyon.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rollInLeft">
+                    <h2>Lodging
+                    </h2>
+                </div>
+                <p>South Rim & North Rim lodging book up well in advance. Make reservations as far ahead as possible to ensure a comfortable stay!
+                </p>
+                <p><a href="https://www.tutorialrepublic.com/html-tutoria/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rollInRight">
+                    <h2>Camping
+                    </h2>
+                </div>
+                <p>Campgrounds are open for the more intimate stay. Reserve your site today!</p>
+                <p><a href="https://www.tutorialrepublic.com/css-tutoria/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rollInTop">
+                    <h2>Trip Planning Maps
+                    </h2>
+                </div>
+                <p>Download & read our Trip Planner before you visit the part for the most up to date information & essentials.</p>
+                <p><a href="https://www.tutorialrepublic.com/javascript-tutoria/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="rollInBottom">
+                    <h2>Critical Backcountry Updates
+                    </h2>
+                </div>
+                <p>In the event of Trail Closures & Restrictions you can call 123-456-7890 for recorded updates.</p>
+                <p><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutoria/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <h2>Virtual Tours
+                </h2>
+                <p>Click here for a virtual tour of The Grand Canyon</p>
+                <p><a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutoria/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
+            </div>
+        </div>
+        <hr>
+
+        <footer>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Copyright &copy; 2021 Canyon Hikers</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <a href="#" class="text-dark">Terms of Use</a>
+                    <span class="text-muted mx-2">|</span>
+                    <a href="#" class="text-dark">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

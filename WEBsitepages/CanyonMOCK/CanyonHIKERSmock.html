@@ -187,16 +187,19 @@
         
         .navbar-brand {
             color: #A46D84;
-            background-color: #A46D84
+            background-color: #A46D84:
+        }
+        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
         }
     </style>
 </head>
 
 <body>
-    <audio controls>
-        <source src="./audio/CanyonHIKERS.mp4" type="audio/mp4">
-    </audio>
-
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
         <div class="container-fluid">
             <a href="#" class="navbar-brand mr-3">Canyon Hikers</a>
@@ -219,8 +222,11 @@
 
     <div class="container">
         <div class="jumbotron">
-            <img src="./images/CanyonHIKERS.png" alt="GrandCANYON">
+            <img src="./images/CanyonHIKERS.png" alt="GrandCANYON" class="center">
             <p class="lead">Welcome to Canyon Hikers, your one stop shop for all your travel & hiking needs in the Grand Canyon.</p>
+            <audio controls>
+                <source src="./audio/CanyonHIKERS.mp4" type="audio/mp4">
+            </audio>
         </div>
 
         <div class="row">
